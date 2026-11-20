@@ -2,6 +2,7 @@
 
 use App\Models\Studio;
 use App\Models\User;
+use Illuminate\Foundation\Testing\DatabaseTruncation;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Testing\TestResponse;
 use Laravel\Sanctum\Sanctum;
@@ -14,6 +15,14 @@ use Tests\TestCase;
 pest()->extend(TestCase::class)
     ->use(RefreshDatabase::class)
     ->in('Feature');
+
+/*
+| Concurrency tests start separate PHP processes that must see the test data,
+| so it has to be committed: tables are truncated before each test instead.
+*/
+pest()->extend(TestCase::class)
+    ->use(DatabaseTruncation::class)
+    ->in('Concurrency');
 
 /** Authenticate as a fresh customer (or the given user) for API calls. */
 function actingAsCustomer(?User $user = null): User

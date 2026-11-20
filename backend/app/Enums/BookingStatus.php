@@ -9,7 +9,7 @@ namespace App\Enums;
  *         |--10 min--> EXPIRED
  *         `--cancel--> CANCELLED
  *
- * Transition rules are enforced in phase 2; this enum only names the states.
+ * Changes are applied only by App\Actions\Bookings\BookingStateMachine.
  */
 enum BookingStatus: string
 {
@@ -18,6 +18,28 @@ enum BookingStatus: string
     case Used = 'USED';
     case Expired = 'EXPIRED';
     case Cancelled = 'CANCELLED';
+
+    /** @return list<self> statuses this one may move to */
+    public function allowedTransitions(): array
+    {
+        return match ($this) {
+            self::PendingPayment => [self::Confirmed, self::Expired, self::Cancelled],
+            self::Confirmed => [self::Used],
+            // Final states.
+            self::Used, self::Expired, self::Cancelled => [],
+        };
+    }
+
+    public function canTransitionTo(self $to): bool
+    {
+        return in_array($to, $this->allowedTransitions(), true);
+    }
+
+    /** Leaving into one of these frees the seats. */
+    public function releasesSeats(): bool
+    {
+        return in_array($this, [self::Expired, self::Cancelled], true);
+    }
 
     /** Statuses whose seats count as sold on the seat map. */
     public static function soldStatuses(): array

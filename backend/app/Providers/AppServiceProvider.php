@@ -26,6 +26,10 @@ class AppServiceProvider extends ServiceProvider
             Limit::perMinute(30)->by($request->ip()),
         ]);
 
+        // Creating bookings holds seats for 10 minutes, so an abusive client
+        // could lock up a whole studio. 10 attempts per minute per user.
+        RateLimiter::for('bookings', fn (Request $request) => Limit::perMinute(10)->by((string) $request->user()?->id ?: $request->ip()));
+
         // Keep the default { "data": ... } wrapper on every resource.
         JsonResource::wrap('data');
     }

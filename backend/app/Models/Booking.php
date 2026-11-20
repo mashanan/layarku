@@ -10,8 +10,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-// `status` is fillable only for seeders/factories in phase 1. Phase 2 routes
-// every status change through a single transition service.
+// `status` is fillable so a booking can be *created* with its initial status.
+// Every later change goes through App\Actions\Bookings\BookingStateMachine.
 #[Fillable(['user_id', 'showtime_id', 'status', 'total_idr', 'ticket_code', 'expires_at', 'used_at'])]
 #[Hidden(['ticket_code'])]
 class Booking extends Model

@@ -1,6 +1,6 @@
 # Layarku
 
-> 🚧 **Work in progress.** Portfolio project, currently at phase 1 (backend foundation). See [backend/README.md](backend/README.md) to run the API.
+> 🚧 **Work in progress.** Portfolio project, currently at phase 2 (bookings without double-booked seats). See [backend/README.md](backend/README.md) to run the API.
 
 **Layarku** is a cinema ticket booking app. Customers browse movies, pick a showtime, choose seats on a live seat map, pay through Midtrans (sandbox) and receive a QR ticket that opens offline. Cinema staff scan the QR at the studio door, and only the server decides whether a ticket is valid.
 
@@ -38,7 +38,7 @@ The cinema brand in the demo, **"Layar Kota Cinema"**, is entirely fictional. It
 |---|---|---|
 | 0 | Monorepo scaffold | ✅ |
 | 1 | Backend: Laravel, migrations, seeders, TMDB import, auth, movies/showtimes/seats | ✅ |
-| 2 | Backend: bookings, row locking, expiry, cancellation, concurrency tests | ⏳ |
+| 2 | Backend: bookings, row locking, expiry, cancellation, concurrency tests | ✅ |
 | 3 | Android: project setup, theme, navigation, login and register | ⏳ |
 | 4 | Android: movies, showtimes, seat map, order summary | ⏳ |
 | 5 | Payments and QR tickets | ⏳ |

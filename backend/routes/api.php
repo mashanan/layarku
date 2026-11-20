@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\BookingController;
 use App\Http\Controllers\Api\MovieController;
 use App\Http\Controllers\Api\MovieShowtimeController;
 use App\Http\Controllers\Api\ProfileController;
@@ -29,4 +30,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('movies/{movie}/showtimes', [MovieShowtimeController::class, 'index']);
 
     Route::get('showtimes/{showtime}/seats', [SeatMapController::class, 'show']);
+
+    Route::get('bookings', [BookingController::class, 'index']);
+    Route::post('bookings', [BookingController::class, 'store'])->middleware('throttle:bookings');
+    Route::get('bookings/{booking}', [BookingController::class, 'show'])->whereNumber('booking');
+    Route::post('bookings/{booking}/cancel', [BookingController::class, 'cancel'])->whereNumber('booking');
 });

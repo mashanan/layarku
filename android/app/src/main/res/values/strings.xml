@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Layarku</string>
+    <string name="brand_name">Layar Kota Cinema</string>
+    <string name="brand_tagline">Pick a film, pick your seat.</string>
+
+    <!-- Auth: shared -->
+    <string name="field_name">Full name</string>
+    <string name="field_email">Email</string>
+    <string name="field_phone">Phone number (optional)</string>
+    <string name="field_password">Password</string>
+    <string name="password_show">Show</string>
+    <string name="password_hide">Hide</string>
+    <string name="cd_show_password">Show password</string>
+    <string name="cd_hide_password">Hide password</string>
+
+    <!-- Login -->
+    <string name="login_title">Welcome back</string>
+    <string name="login_subtitle">Sign in to book your seats.</string>
+    <string name="login_button">Sign in</string>
+    <string name="login_no_account">New here?</string>
+    <string name="login_go_to_register">Create an account</string>
+
+    <!-- Register -->
+    <string name="register_title">Create an account</string>
+    <string name="register_subtitle">It takes less than a minute.</string>
+    <string name="register_button">Create account</string>
+    <string name="register_password_hint">At least 8 characters</string>
+    <string name="register_have_account">Already have an account?</string>
+    <string name="register_go_to_login">Sign in</string>
+
+    <!-- Home (temporary until phase 4) -->
+    <string name="home_greeting">Hi, %1$s!</string>
+    <string name="home_placeholder">Movies are coming soon. You are signed in as %1$s.</string>
+    <string name="home_role_customer">customer</string>
+    <string name="home_role_staff">staff</string>
+    <string name="logout_button">Sign out</string>
+
+    <!-- Form validation -->
+    <string name="error_required">This field is required</string>
+    <string name="error_email_invalid">Enter a valid email address</string>
+    <string name="error_password_too_short">Use at least 8 characters</string>
+    <string name="error_phone_invalid">Use 8 to 15 digits, optionally starting with +</string>
+    <string name="error_name_too_long">Use at most 100 characters</string>
+    <string name="error_email_unavailable">This email can\'t be used. It may already be registered.</string>
+    <string name="error_field_rejected">Please check this field</string>
+
+    <!-- Network and server errors -->
+    <string name="error_no_internet">Can\'t reach the server. Check your connection and try again.</string>
+    <string name="error_invalid_credentials">The email or password is incorrect.</string>
+    <string name="error_session_expired">Your session has ended. Please sign in again.</string>
+    <string name="error_too_many_requests">Too many attempts. Please wait a minute and try again.</string>
+    <string name="error_server">Something went wrong on our side. Please try again later.</string>
+    <string name="error_forbidden">You don\'t have access to this.</string>
+    <string name="error_not_found">We couldn\'t find what you were looking for.</string>
+    <string name="error_seat_taken">Some of those seats were just taken. Please pick again.</string>
+    <string name="error_unknown">Something unexpected happened. Please try again.</string>
+</resources>

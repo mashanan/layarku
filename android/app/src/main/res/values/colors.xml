@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Used before Compose draws (window background / splash). Matches the Compose theme. -->
+    <color name="layar_night">#FF10162B</color>
+    <color name="layar_paper">#FFFBF8F3</color>
+</resources>

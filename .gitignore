@@ -37,6 +37,7 @@ backend/database/*.sqlite-journal
 
 # ---------- Android ----------
 android/.gradle/
+android/.kotlin/
 android/build/
 android/app/build/
 android/captures/

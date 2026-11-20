@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Layarku</string>
+    <string name="brand_name">Layar Kota Cinema</string>
+    <string name="brand_tagline">Pilih film, pilih kursimu.</string>
+
+    <!-- Auth: shared -->
+    <string name="field_name">Nama lengkap</string>
+    <string name="field_email">Email</string>
+    <string name="field_phone">Nomor telepon (opsional)</string>
+    <string name="field_password">Kata sandi</string>
+    <string name="password_show">Lihat</string>
+    <string name="password_hide">Sembunyikan</string>
+    <string name="cd_show_password">Tampilkan kata sandi</string>
+    <string name="cd_hide_password">Sembunyikan kata sandi</string>
+
+    <!-- Login -->
+    <string name="login_title">Selamat datang kembali</string>
+    <string name="login_subtitle">Masuk untuk memesan kursi.</string>
+    <string name="login_button">Masuk</string>
+    <string name="login_no_account">Baru di sini?</string>
+    <string name="login_go_to_register">Buat akun</string>
+
+    <!-- Register -->
+    <string name="register_title">Buat akun</string>
+    <string name="register_subtitle">Tidak sampai satu menit.</string>
+    <string name="register_button">Buat akun</string>
+    <string name="register_password_hint">Minimal 8 karakter</string>
+    <string name="register_have_account">Sudah punya akun?</string>
+    <string name="register_go_to_login">Masuk</string>
+
+    <!-- Home (sementara sampai fase 4) -->
+    <string name="home_greeting">Halo, %1$s!</string>
+    <string name="home_placeholder">Daftar film segera hadir. Kamu masuk sebagai %1$s.</string>
+    <string name="home_role_customer">pelanggan</string>
+    <string name="home_role_staff">petugas</string>
+    <string name="logout_button">Keluar</string>
+
+    <!-- Validasi form -->
+    <string name="error_required">Wajib diisi</string>
+    <string name="error_email_invalid">Masukkan alamat email yang valid</string>
+    <string name="error_password_too_short">Gunakan minimal 8 karakter</string>
+    <string name="error_phone_invalid">Gunakan 8 sampai 15 angka, boleh diawali +</string>
+    <string name="error_name_too_long">Maksimal 100 karakter</string>
+    <string name="error_email_unavailable">Email ini tidak bisa dipakai. Mungkin sudah terdaftar.</string>
+    <string name="error_field_rejected">Periksa kembali isian ini</string>
+
+    <!-- Error jaringan dan server -->
+    <string name="error_no_internet">Tidak bisa terhubung ke server. Periksa koneksi lalu coba lagi.</string>
+    <string name="error_invalid_credentials">Email atau kata sandi salah.</string>
+    <string name="error_session_expired">Sesi kamu sudah berakhir. Silakan masuk lagi.</string>
+    <string name="error_too_many_requests">Terlalu banyak percobaan. Tunggu sebentar lalu coba lagi.</string>
+    <string name="error_server">Terjadi masalah di server kami. Silakan coba lagi nanti.</string>
+    <string name="error_forbidden">Kamu tidak punya akses ke halaman ini.</string>
+    <string name="error_not_found">Data yang kamu cari tidak ditemukan.</string>
+    <string name="error_seat_taken">Beberapa kursi itu baru saja diambil orang lain. Silakan pilih lagi.</string>
+    <string name="error_unknown">Terjadi kesalahan. Silakan coba lagi.</string>
+</resources>

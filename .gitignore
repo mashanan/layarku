@@ -1,0 +1,60 @@
+# =========================================================
+# Layarku monorepo .gitignore
+# This repository is PUBLIC. Secrets must never be committed.
+# =========================================================
+
+# ---------- Secrets & environment ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.key
+# FCM / Google Cloud service account JSON (server side only)
+*service-account*.json
+*serviceAccount*.json
+*firebase-adminsdk*.json
+backend/storage/app/firebase/*.json
+
+# Android signing
+*.jks
+*.keystore
+keystore.properties
+local.properties
+
+# ---------- Backend (Laravel) ----------
+backend/vendor/
+backend/node_modules/
+backend/public/build/
+backend/public/hot
+backend/public/storage
+backend/storage/*.key
+backend/storage/logs/*.log
+backend/.phpunit.result.cache
+backend/.phpunit.cache/
+backend/database/*.sqlite
+backend/database/*.sqlite-journal
+
+# ---------- Android ----------
+android/.gradle/
+android/build/
+android/app/build/
+android/captures/
+android/.externalNativeBuild/
+android/.cxx/
+android/app/release/
+*.apk
+*.aab
+*.hprof
+
+# ---------- IDE / OS ----------
+.idea/
+*.iml
+.vscode/
+.fleet/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Claude Code (local, per machine) ----------
+.claude/settings.local.json
